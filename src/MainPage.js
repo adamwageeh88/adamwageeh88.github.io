@@ -134,7 +134,12 @@ export default function MiniDrawer() {
         </DrawerHeader>
         <Divider />
         <List>
-          {[['Dashboard', <DashboardIcon />], ['Syncs', <SyncIcon />], ['People', <ForumIcon />], ['Projects', <AssignmentIcon />], ['Calendar',  <CalendarMonthIcon />]].map((text, index) => (
+          {[
+            ['Dashboard', <DashboardIcon />], 
+            ['Syncs', <SyncIcon />], 
+            ['People', <ForumIcon />], 
+            ['Projects', <AssignmentIcon />], 
+            ['Calendar',  <CalendarMonthIcon />]].map((text, index) => (
             <ListItem key={text[0]} disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 sx={{
@@ -159,8 +164,13 @@ export default function MiniDrawer() {
         </List>
         <Divider />
         <List>
-          {[['Profile', <Avatar />], ['Logout', <LogoutIcon />]].map((text, index) => (
-            <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+          {[[
+            'Profile', <Avatar sx={{
+                width: 26,
+                height: 26,
+            }}/>], 
+            ['Logout', <LogoutIcon />]].map((text, index) => (
+            <ListItem key={text[0]} disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 sx={{
                   minHeight: 48,
@@ -175,8 +185,9 @@ export default function MiniDrawer() {
                     justifyContent: 'center',
                   }}
                 >
+                    {text[1]}
                 </ListItemIcon>
-                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+                <ListItemText primary={text[0]} sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>
           ))}
