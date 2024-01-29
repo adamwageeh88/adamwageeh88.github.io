@@ -36,14 +36,16 @@ export default function Dashboard() {
         >
           <Box  sx={{margin:'30px', maxWidth: '100' }}>
             <Grid container spacing={3}>
-              <Grid item xs={12} md={8} lg={9}>
+              <Grid item xs={15} md={8} lg={9}>
                 <Paper
                   sx={{
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
+                    justifyContent: 'center',
                     height: 'auto',
-                    minHeight: '300px'
+                    minHeight: '330px',
+                    maxHeight: '450px',
                   }}
                 >
                   <RecentSyncs />
@@ -56,7 +58,8 @@ export default function Dashboard() {
                     display: 'flex',
                     flexDirection: 'column',
                     height: 'auto',
-                    minHeight: '300px',
+                    minHeight: '330px',
+                    maxHeight: '450px',
                   }}
                 >
                   <Events />
@@ -68,7 +71,8 @@ export default function Dashboard() {
                     display: 'flex', 
                     flexDirection: 'column',
                     height: 'auto',
-                    minHeight: '300px',
+                    minHeight: '330px',
+                    maxHeight: '450px',
                     }}>
                   <RecentTasks />
                 </Paper>

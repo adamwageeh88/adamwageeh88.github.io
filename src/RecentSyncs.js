@@ -17,7 +17,7 @@ export default function Chart() {
       }}>
       <Title>Recent Syncs</Title>
       <Button sx={{
-        width:'210px', 
+        width:'150px', 
         color:'#05284C',
         borderColor:'#EE964B',
         ":hover": {
@@ -25,10 +25,10 @@ export default function Chart() {
           color: "white"
         }
         }} variant="outlined" endIcon={<NavigateNextIcon />}>
-          Go to Syncs Page
+          Syncs Page
       </Button>
       </Box>
-      <div style={{ width: '100%', flexGrow: 1, overflow: 'hidden' }}>
+      <div style={{ width: '100%', flexGrow: 1, overflow: 'auto' }}>
         {["Sync 1", "Sync 2", "Sync 3"].map((text, index) => (
           <Box
           key={text}
